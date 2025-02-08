@@ -12,7 +12,7 @@ export const symlinkCommon = async () => {
       .then((v) => v.isSymbolicLink())
       .catch(() => false)) &&
     (await fs.readlink(dst)) === src
-  ) { b
+  ) { 
     console.log("同步成功！");
   } else {
     fs.symlink(src, dst)
